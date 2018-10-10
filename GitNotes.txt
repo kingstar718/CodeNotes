@@ -1,0 +1,17 @@
+Git笔记
+
+1.github新建仓库
+2.本地新建同名文件夹,右击Git Bash Here,打开命令行
+3.使用git init进行初始化
+4.git remote add origin git@github.com:xxx/xxx.git  增加对github上创建的xxx仓库的管理
+5.由于建立仓库的时候创建README.md之时，已经算一次提交了，
+  我需要先在本地同步一下仓库的内容,命令如下：git pull git@github.com:xxx/xxx.git
+6.本地文件创建,修改之后;
+7.命令git add .   后面加.代表提交所有文件    <重要>
+8.git commit –m “这里写下你自己的记录本次提交内容的信息”  <重要>
+9.推送到远程:git push git@github.com:xxx/xxx.git
+
+备注:现在就基本上可以使用了，每次增加了新文件就先add，然后commit，如果只是改了文件的内容，
+	只执行commit就行了，当然最后一步都是要执行push，把所以改变推送到我们的github上去托管。
+	其实，这里有一处提醒，就是最后push那一步，提醒中说，已经有更牛逼的办法了。
+	所以，你自己去根据提示去看看什么牛逼的办法吧，如果懒，就这么用就行倒是。
