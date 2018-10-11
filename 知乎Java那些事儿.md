@@ -44,3 +44,21 @@ System.out.println(p1.equals(p2));  //false
 String的equals实现:
 ![equals](https://pic2.zhimg.com/80/v2-330cbd581df8d308946da6aabba0667f_hd.jpg)
 当代码执行到：System.out.println(s3.equals(s4))，由于字符串底层char数组里存的都是{'1','0','0'}当然打印出来是true了。
+
+### 4.数组   
+
+>概念:数组，是相同数据类型的元素按一定顺序排列的集合。
+数组的三种声明方法:
+![数组](https://pic3.zhimg.com/80/v2-35105f000b2343a3cb8053abdb0c6233_hd.jpg)
+反编译后:
+![反编译](https://pic3.zhimg.com/80/v2-ff2927f3ff98cd43cbbc3e18e6336ab2_hd.jpg)
+三种数组的声明方式编译后，最后创建的方式都是一样的，都给我们加了new关键字，顺手还把charArr3的声明与赋值一体化了，编译器你管得也太多了吧。评论区里有人说反编译后和我反编译后的代码不一样，本专栏所有文章是基于JDK1.8讲解的，反编译工具是idea自带的反编译工具，不一样的原因可能是各位的JDK版本或反编译工具和我不一致。用IDE的代码联想功能看一下：
+![联想](https://pic4.zhimg.com/80/v2-892060ceb35b218c1e7b8c9372a86881_hd.jpg)
+Object类有的方法它都有，它还多了一个length属性（注意不是方法）。个人认为，在Java层面，我们完全可以把数组当成对象来看待，下图我们模拟一下数组在堆内存中的大致的样子，每一个数组都是按顺序排列在堆内存中，正因为如此，我们可以通过数组+[下标]的方式来直接访问数组里的元素。
+
+二维数组:
+![二维数组](https://pic1.zhimg.com/80/v2-8e1892a0c57b3a3d1ac11707c7356113_hd.jpg)
+反编译:
+![反编译](https://pic3.zhimg.com/80/v2-a44b7c61d53417c5b1fb62f9f5384eed_hd.jpg)
+图像表示:
+![表示](https://pic1.zhimg.com/80/v2-5ad580bf5b5b89b780fa67fe0dcca09d_hd.jpg)
