@@ -1,10 +1,10 @@
-###1.Integer
- Integer的作者写这个类时,为了避免重复创建对象,对Integer值做了缓存, 如果值在缓存范围内直接返回缓存好的对象,否则new一个对象返回.  IntegerCache这是一个内部静态类，该类只能在Integer这个类的内部访问， 这个类在初始化的时候，会去加载JVM的配置，如果有值，就用配置的值初始化缓存数组，  否则就缓存-128到127之间的值。
+### 1.Integer   
+Integer的作者写这个类时,为了避免重复创建对象,对Integer值做了缓存, 如果值在缓存范围内直接返回缓存好的对象,否则new一个对象返回.  IntegerCache这是一个内部静态类，该类只能在Integer这个类的内部访问， 这个类在初始化的时候，会去加载JVM的配置，如果有值，就用配置的值初始化缓存数组，  否则就缓存-128到127之间的值。
 
 >结论：我们在比较两个Integer对象的值时，无论是怎么声明的，都一定要使用equals去比较，
         不能用==，在Java中没有重载操作符这一说，特别是从其它语言转到Java的童鞋们要注意。
 
-###2.string
+### 2.string   
 ```java
 String s1 = "100";
 String s2 = "100";
@@ -22,7 +22,7 @@ System.out.println(s3==s4);  //false
 
 >结论：我们在比较两个String对象内容时，无论是怎么声明的，都一定要使用equals去比较，不能用==， 在Java中没有重载操作符这一说，特别是从其它语言转到Java的童鞋们要注意。Java字符串两种声明方式在堆内存中不同的体现，我们在写代码过程中，为了避免重复的创建对象，尽量使用String s1 ="123" 而不是String s1 = new String("123")，因为JVM对前者给做了优化。
 
-###3.equals
+### 3.equals   
 ```java
 String s3 = new String("100");
 String s4 = new String("100");
