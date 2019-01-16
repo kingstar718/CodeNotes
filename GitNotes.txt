@@ -10,7 +10,9 @@ Git笔记
 7.命令git add .   后面加.代表提交所有文件    <重要>
 8.git commit –m “这里写下你自己的记录本次提交内容的信息”  <重要>
 9.推送到远程:git push git@github.com:xxx/xxx.git
-
+10.修改后再次推送a.git add .
+		b.git commit -m "message"
+		c.git push origin master
 备注:现在就基本上可以使用了，每次增加了新文件就先add，然后commit，如果只是改了文件的内容，
 	只执行commit就行了，当然最后一步都是要执行push，把所以改变推送到我们的github上去托管。
 	其实，这里有一处提醒，就是最后push那一步，提醒中说，已经有更牛逼的办法了。
