@@ -3,7 +3,7 @@
 ## 第一个shell脚本
 
 将如下代码保存在新建文件`test.sh`中：
-```
+```shell
 #!/bin/bash
 echo "Hello World !"
 ```
@@ -13,7 +13,7 @@ echo命令用于向窗口输出文本。
 
 运行Shell脚本的两种方式：
 1、作为可执行程序：
-```
+```shell
 chmod +x ./test.sh #使脚本具有执行权限
 ./test.sh # 执行脚本
 ```
@@ -25,7 +25,7 @@ chmod +x ./test.sh #使脚本具有执行权限
 
 2、作为解释器参数
 这种方式是直接运行解释器，其参数就是shell脚本的文件名，如：
-```
+```shell
 /bin/sh test.sh
 /bin/php test.php
 ```
